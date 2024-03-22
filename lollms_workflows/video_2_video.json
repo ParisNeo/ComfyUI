@@ -1,6 +1,6 @@
 {
-  "last_node_id": 115,
-  "last_link_id": 286,
+  "last_node_id": 116,
+  "last_link_id": 287,
   "nodes": [
     {
       "id": 50,
@@ -90,7 +90,7 @@
         "1": 246
       },
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -102,219 +102,6 @@
       "properties": {
         "Node name for S&R": "PreviewImage"
       }
-    },
-    {
-      "id": 105,
-      "type": "PrimitiveNode",
-      "pos": [
-        -1175.5485144325,
-        -587.2665241809375
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            223
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "title": "Height",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        576,
-        "fixed"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 104,
-      "type": "PrimitiveNode",
-      "pos": [
-        -1176.5485144325,
-        -710.2665241809375
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            222
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "width"
-          }
-        }
-      ],
-      "title": "Width",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        1024,
-        "fixed"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 108,
-      "type": "VHS_LoadImagesPath",
-      "pos": [
-        -1277.5485144325,
-        -951.2665241809375
-      ],
-      "size": [
-        315,
-        194
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadImagesPath"
-      },
-      "widgets_values": {
-        "directory": "E:\\drumber",
-        "image_load_cap": 0,
-        "skip_first_images": 0,
-        "select_every_nth": 1,
-        "choose folder to upload": "image",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "frame_load_cap": 0,
-            "skip_first_images": 0,
-            "filename": "E:\\drumber",
-            "type": "path",
-            "format": "folder",
-            "select_every_nth": 1
-          }
-        }
-      },
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 107,
-      "type": "VHS_LoadVideoPath",
-      "pos": [
-        -1278.5485144325,
-        -1213.2665241809375
-      ],
-      "size": [
-        315,
-        218
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "batch_manager",
-          "type": "VHS_BatchManager",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            254
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "audio",
-          "type": "VHS_AUDIO",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadVideoPath"
-      },
-      "widgets_values": {
-        "video": "E:\\drumber/darthvader.mp4",
-        "force_rate": 10,
-        "force_size": "Disabled",
-        "custom_width": 512,
-        "custom_height": 512,
-        "frame_load_cap": 0,
-        "skip_first_frames": 0,
-        "select_every_nth": 1,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "frame_load_cap": 0,
-            "skip_first_frames": 0,
-            "force_rate": 10,
-            "filename": "E:\\drumber/darthvader.mp4",
-            "type": "path",
-            "format": "video/mp4",
-            "select_every_nth": 1
-          }
-        }
-      },
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 100,
@@ -379,7 +166,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 5,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -420,7 +207,7 @@
         290
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -473,86 +260,18 @@
       }
     },
     {
-      "id": 93,
-      "type": "ADE_AnimateDiffLoaderWithContext",
-      "pos": [
-        180.00031550546893,
-        -603.4102097250002
-      ],
-      "size": {
-        "0": 315,
-        "1": 230
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 265
-        },
-        {
-          "name": "context_options",
-          "type": "CONTEXT_OPTIONS",
-          "link": 206,
-          "slot_index": 1
-        },
-        {
-          "name": "motion_lora",
-          "type": "MOTION_LORA",
-          "link": null
-        },
-        {
-          "name": "motion_model_settings",
-          "type": "MOTION_MODEL_SETTINGS",
-          "link": null
-        },
-        {
-          "name": "sample_settings",
-          "type": "SAMPLE_SETTINGS",
-          "link": null
-        },
-        {
-          "name": "ad_keyframes",
-          "type": "AD_KEYFRAMES",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            276
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
-      },
-      "widgets_values": [
-        "mm_sdxl_v10_beta.ckpt",
-        "autoselect",
-        1,
-        false
-      ]
-    },
-    {
       "id": 112,
       "type": "KSampler SDXL (Eff.)",
       "pos": [
         1245.436576089063,
         -490.1793974445311
       ],
-      "size": [
-        325,
-        546.0000152587891
-      ],
+      "size": {
+        "0": 325,
+        "1": 546
+      },
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -609,7 +328,7 @@
         "Node name for S&R": "KSampler SDXL (Eff.)"
       },
       "widgets_values": [
-        -1,
+        1125005953153375,
         null,
         20,
         7,
@@ -636,7 +355,7 @@
         "1": 266
       },
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -733,7 +452,7 @@
         "1": 166
       },
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -806,7 +525,7 @@
         "1": 166
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -902,12 +621,12 @@
         -1347.5485144325,
         -420.2665241809374
       ],
-      "size": [
-        400,
-        402
-      ],
+      "size": {
+        "0": 400,
+        "1": 402
+      },
       "flags": {},
-      "order": 6,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -958,7 +677,7 @@
         "Node name for S&R": "Eff. Loader SDXL"
       },
       "widgets_values": [
-        "Juggernaut_XL.safetensors",
+        "juggernaut.safetensors",
         -2,
         "None",
         -2,
@@ -995,7 +714,7 @@
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 254
+          "link": 287
         },
         {
           "name": "width",
@@ -1079,6 +798,226 @@
       "properties": {
         "Node name for S&R": "VAEEncode"
       }
+    },
+    {
+      "id": 93,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        180.00031550546893,
+        -603.4102097250002
+      ],
+      "size": {
+        "0": 315,
+        "1": 230
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 265
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 206,
+          "slot_index": 1
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": null
+        },
+        {
+          "name": "motion_model_settings",
+          "type": "MOTION_MODEL_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "sample_settings",
+          "type": "SAMPLE_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "ad_keyframes",
+          "type": "AD_KEYFRAMES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            276
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "mm_sdxl_v10_beta.ckpt",
+        "autoselect",
+        1,
+        false
+      ]
+    },
+    {
+      "id": 104,
+      "type": "PrimitiveNode",
+      "pos": [
+        -929,
+        -858
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            222
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "width"
+          }
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        1024,
+        "fixed"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 105,
+      "type": "PrimitiveNode",
+      "pos": [
+        -926,
+        -732
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            223
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        576,
+        "fixed"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 116,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -949,
+        -1274
+      ],
+      "size": [
+        235.1999969482422,
+        377.04999828338623
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            287
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "me_drumps.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "force_rate": 0,
+            "select_every_nth": 1,
+            "filename": "me_drumps.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
+        }
+      }
     }
   ],
   "links": [
@@ -1137,14 +1076,6 @@
       53,
       2,
       "INT"
-    ],
-    [
-      254,
-      107,
-      0,
-      53,
-      0,
-      "IMAGE"
     ],
     [
       257,
@@ -1305,6 +1236,14 @@
       115,
       7,
       "CONDITIONING"
+    ],
+    [
+      287,
+      116,
+      0,
+      53,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
