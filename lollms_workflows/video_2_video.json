@@ -469,46 +469,6 @@
       ]
     },
     {
-      "id": 120,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -898,
-        -505
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 294
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            298
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode (Positive Prompt)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "An drumber playing drumbs ni an energetic way, anime style, best quality, hyperdetailed photograph, lowlight"
-      ]
-    },
-    {
       "id": 121,
       "type": "CLIPTextEncode",
       "pos": [
@@ -560,7 +520,7 @@
         "1": 266
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -723,7 +683,6 @@
         242
       ],
       "flags": {},
-      "order": 2,
       "order": 2,
       "mode": 0,
       "inputs": [
@@ -911,6 +870,46 @@
       },
       "widgets_values": [
         "Juggernaut_XL.safetensors"
+      ]
+    },
+    {
+      "id": 120,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -898,
+        -505
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 294
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            298
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "An drumber playing drumbs ni an energetic way, anime style"
       ]
     }
   ],
