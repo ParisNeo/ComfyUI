@@ -1,0 +1,640 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 34,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        158,
+        260
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            6,
+            22
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Juggernaut_XL.safetensors"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": [
+        165,
+        431
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21,
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "parisneo.png",
+        "image"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        1246,
+        632
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 5,
+      "type": "VAEDecode",
+      "pos": [
+        2037,
+        389
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 5
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 9,
+      "type": "ImageScaleBy",
+      "pos": [
+        2344,
+        369
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "type": "KSampler",
+      "pos": [
+        1616,
+        302
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 30
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 31
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        528139907979598,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        1224,
+        322
+      ],
+      "size": {
+        "0": 315,
+        "1": 166
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 29
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 28
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 33
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0.2
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewImage",
+      "pos": [
+        2745,
+        293
+      ],
+      "size": {
+        "0": 732.3386840820312,
+        "1": 748.5615234375
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 17,
+      "type": "Inference_Core_DepthAnythingPreprocessor",
+      "pos": [
+        699,
+        669
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32,
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Inference_Core_DepthAnythingPreprocessor"
+      },
+      "widgets_values": [
+        "depth_anything_vitl14.pth",
+        512
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ControlNetLoader",
+      "pos": [
+        699,
+        828
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "depth_xl.safetensors"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "Artbot",
+      "pos": [
+        656,
+        320
+      ],
+      "size": [
+        397.37966511722357,
+        263.3462896643515
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 17
+        },
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Positive",
+          "type": "CONDITIONING",
+          "links": [
+            29
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "Negative",
+          "type": "CONDITIONING",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Artbot"
+      },
+      "widgets_values": [
+        "http://localhost:9600",
+        "NO",
+        1024,
+        1024,
+        2,
+        "(Android:1.5) persona dancing as Paris neo. the android wears a tuxedo and a watch. its face is like google android persona. Paris in the background, cyberpunk; augmented"
+      ]
+    }
+  ],
+  "links": [
+    [
+      4,
+      3,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      4,
+      0,
+      5,
+      0,
+      "LATENT"
+    ],
+    [
+      6,
+      3,
+      2,
+      5,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      5,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      9,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      3,
+      1,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      20,
+      14,
+      2,
+      4,
+      3,
+      "LATENT"
+    ],
+    [
+      21,
+      15,
+      0,
+      14,
+      1,
+      "IMAGE"
+    ],
+    [
+      22,
+      3,
+      2,
+      14,
+      2,
+      "VAE"
+    ],
+    [
+      24,
+      15,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      14,
+      1,
+      18,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      29,
+      14,
+      0,
+      18,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      30,
+      18,
+      0,
+      4,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      31,
+      18,
+      1,
+      4,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      32,
+      17,
+      0,
+      18,
+      3,
+      "IMAGE"
+    ],
+    [
+      33,
+      19,
+      0,
+      18,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      34,
+      17,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
