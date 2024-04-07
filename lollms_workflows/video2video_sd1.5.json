@@ -1,6 +1,6 @@
 {
-  "last_node_id": 122,
-  "last_link_id": 304,
+  "last_node_id": 124,
+  "last_link_id": 308,
   "nodes": [
     {
       "id": 94,
@@ -54,68 +54,6 @@
       ]
     },
     {
-      "id": 53,
-      "type": "ImageScale",
-      "pos": [
-        -336,
-        -1303
-      ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 304
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 222,
-          "widget": {
-            "name": "width"
-          },
-          "slot_index": 1
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 223,
-          "widget": {
-            "name": "height"
-          },
-          "slot_index": 2
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            86,
-            87,
-            215
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageScale"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        1024,
-        512,
-        "disabled"
-      ]
-    },
-    {
       "id": 109,
       "type": "VHS_VideoCombine",
       "pos": [
@@ -124,7 +62,7 @@
       ],
       "size": [
         315,
-        451.5
+        599
       ],
       "flags": {},
       "order": 17,
@@ -171,7 +109,7 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_00011.mp4",
+            "filename": "AnimateDiff_00012.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4"
@@ -212,7 +150,7 @@
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 290
+          "link": 308
         }
       ],
       "outputs": [
@@ -231,7 +169,7 @@
       },
       "widgets_values": [
         "enable",
-        273283498845387,
+        926373430331517,
         "randomize",
         20,
         8,
@@ -284,47 +222,6 @@
       }
     },
     {
-      "id": 56,
-      "type": "VAEEncode",
-      "pos": [
-        46,
-        -1212
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 87
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 300
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            290
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEEncode"
-      }
-    },
-    {
       "id": 50,
       "type": "PreviewImage",
       "pos": [
@@ -361,7 +258,7 @@
         "1": 198
       },
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -523,59 +420,6 @@
       }
     },
     {
-      "id": 119,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -1324,
-        -336
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            302,
-            303
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            294,
-            295
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            300,
-            301
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "spiritedAwayGeneralModel_Spirited.safetensors"
-      ]
-    },
-    {
       "id": 97,
       "type": "ControlNetLoaderAdvanced",
       "pos": [
@@ -587,7 +431,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -628,7 +472,7 @@
         "1": 230
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -698,7 +542,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -725,78 +569,6 @@
       "bgcolor": "#593930"
     },
     {
-      "id": 122,
-      "type": "VHS_LoadVideo",
-      "pos": [
-        -1144,
-        -1236
-      ],
-      "size": [
-        235.1999969482422,
-        377.04999828338623
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "batch_manager",
-          "type": "VHS_BatchManager",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            304
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "audio",
-          "type": "VHS_AUDIO",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadVideo"
-      },
-      "widgets_values": {
-        "video": "me.mp4",
-        "force_rate": 15,
-        "force_size": "Disabled",
-        "custom_width": 512,
-        "custom_height": 512,
-        "frame_load_cap": 0,
-        "skip_first_frames": 0,
-        "select_every_nth": 1,
-        "choose video to upload": "image",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "frame_load_cap": 0,
-            "skip_first_frames": 0,
-            "force_rate": 15,
-            "select_every_nth": 1,
-            "filename": "me.mp4",
-            "type": "input",
-            "format": "video/mp4"
-          }
-        }
-      }
-    },
-    {
       "id": 104,
       "type": "PrimitiveNode",
       "pos": [
@@ -810,7 +582,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -848,7 +620,7 @@
         "1": 200
       },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -888,7 +660,7 @@
         "1": 200
       },
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -915,6 +687,235 @@
       "widgets_values": [
         "An drumber playing drumbs in an energetic way, anime style, san goku,\nThe drumbs are red and with a fire style on the main drumb."
       ]
+    },
+    {
+      "id": 122,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -1144,
+        -1236
+      ],
+      "size": [
+        235.1999969482422,
+        377.04999828338623
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            304
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "me.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "force_rate": 0,
+            "select_every_nth": 1,
+            "filename": "me.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 53,
+      "type": "ImageScale",
+      "pos": [
+        -336,
+        -1303
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 304
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 222,
+          "widget": {
+            "name": "width"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 223,
+          "widget": {
+            "name": "height"
+          },
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            86,
+            215,
+            306
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1024,
+        512,
+        "disabled"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1324,
+        -336
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            302,
+            303
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            294,
+            295
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            301,
+            307
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "spiritedAwayGeneralModel_Spirited.safetensors"
+      ]
+    },
+    {
+      "id": 124,
+      "type": "VAEEncode",
+      "pos": [
+        123,
+        -1055
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 306
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 307
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            308
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
     }
   ],
   "links": [
@@ -923,14 +924,6 @@
       53,
       0,
       50,
-      0,
-      "IMAGE"
-    ],
-    [
-      87,
-      53,
-      0,
-      56,
       0,
       "IMAGE"
     ],
@@ -1015,14 +1008,6 @@
       "CONDITIONING"
     ],
     [
-      290,
-      56,
-      0,
-      117,
-      3,
-      "LATENT"
-    ],
-    [
       291,
       117,
       0,
@@ -1071,14 +1056,6 @@
       "CONDITIONING"
     ],
     [
-      300,
-      119,
-      2,
-      56,
-      1,
-      "VAE"
-    ],
-    [
       301,
       119,
       2,
@@ -1109,6 +1086,30 @@
       53,
       0,
       "IMAGE"
+    ],
+    [
+      306,
+      53,
+      0,
+      124,
+      0,
+      "IMAGE"
+    ],
+    [
+      307,
+      119,
+      2,
+      124,
+      1,
+      "VAE"
+    ],
+    [
+      308,
+      124,
+      0,
+      117,
+      3,
+      "LATENT"
     ]
   ],
   "groups": [
