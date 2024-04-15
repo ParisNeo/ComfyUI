@@ -169,7 +169,7 @@
       },
       "widgets_values": [
         "enable",
-        926373430331517,
+        969018402339193,
         "randomize",
         20,
         8,
@@ -649,46 +649,6 @@
       ]
     },
     {
-      "id": 120,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -898,
-        -505
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 294
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            298
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode (Positive Prompt)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "An drumber playing drumbs in an energetic way, anime style, san goku,\nThe drumbs are red and with a fire style on the main drumb."
-      ]
-    },
-    {
       "id": 122,
       "type": "VHS_LoadVideo",
       "pos": [
@@ -916,6 +876,46 @@
       "properties": {
         "Node name for S&R": "VAEEncode"
       }
+    },
+    {
+      "id": 120,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -898,
+        -505
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 294
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            298
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "drummer covered in cloud of smoke, whirlwind, red highlight colors, black fur, majestic, hints of pastel, misty, sultry, breathtaking, oil painting style, artistic, aesthetic modern art, hyper-realism, line art"
+      ]
     }
   ],
   "links": [
